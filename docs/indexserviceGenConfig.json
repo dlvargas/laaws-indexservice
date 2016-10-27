@@ -1,0 +1,10 @@
+{
+  "groupId": "org.lockss.laaws",
+  "artifactId": "indexservice",
+  "artifactVersion": "1.0.0",
+  "modelPackage": "org.lockss.laaws.indexservice.model",
+  "apiPackage": "org.lockss.laaws.indexservice.api",
+  "invokerPackage": "org.lockss.laaws.indexservice",
+  "hideGenerationTimestamp": true,
+  "title": "LAAWS IndexService"
+}
