@@ -36,8 +36,10 @@ import javax.annotation.PostConstruct;
 import javax.annotation.PreDestroy;
 import javax.annotation.Resource;
 import javax.ejb.Singleton;
+import javax.ejb.Startup;
 import javax.enterprise.concurrent.ManagedExecutorService;
 
+@Startup
 @Singleton
 public class ExampleEJBImpl implements ExampleEJBLocal {
 
