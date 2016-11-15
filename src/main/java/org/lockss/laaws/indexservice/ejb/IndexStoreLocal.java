@@ -33,5 +33,5 @@ package org.lockss.laaws.indexservice.ejb;
 import javax.ejb.Local;
 
 @Local
-public interface ExampleEJBLocal extends ExampleEJB {
+public interface IndexStoreLocal extends IndexStore {
 }

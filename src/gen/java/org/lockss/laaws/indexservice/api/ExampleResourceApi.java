@@ -30,7 +30,8 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 package org.lockss.laaws.indexservice.api;
 
-import org.lockss.laaws.indexservice.ejb.ExampleEJB;
+import org.lockss.laaws.indexservice.ejb.IndexStore;
+import org.lockss.laaws.indexservice.ejb.ExampleLongRunningTask;
 
 import javax.annotation.Resource;
 import javax.enterprise.concurrent.ManagedExecutorService;
@@ -48,18 +49,18 @@ public class ExampleResourceApi {
     ManagedExecutorService executor;
 
     @Inject
-    ExampleEJB foo;
+    IndexStore foo;
 
     @GET
     @Path("/test/{uri}")
     public Response helloWorld(@PathParam("uri") String uri) throws InterruptedException, ExecutionException {
 
         // Use the ManageExecutorService directly
-        executor.submit(new ExampleLongRunningTask(uri));
-        System.out.println("Submitted ExampleLongRunningTask(\"" + uri +"\")");
+        //executor.submit(new ExampleLongRunningTask(uri));
+        //System.out.println("Submitted ExampleLongRunningTask(\"" + uri +"\")");
 
         // Use an EJB
-        foo.hello(uri);
+        foo.addWarc(uri);
 
         return Response.status(202).entity("OK").build();
     }

@@ -28,7 +28,7 @@ ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 */
 
-package org.lockss.laaws.indexservice.api;
+package org.lockss.laaws.indexservice.ejb;
 
 import java.util.concurrent.Callable;
 

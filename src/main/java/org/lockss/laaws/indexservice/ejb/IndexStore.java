@@ -30,6 +30,18 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 package org.lockss.laaws.indexservice.ejb;
 
-public interface ExampleEJB {
-    void hello(String uri);
+import org.jwat.warc.WarcRecord;
+
+import java.util.List;
+
+public interface IndexStore {
+    // Index operations
+    void addWarc(String uri);
+    void addWarcRecord(WarcRecord record);
+    void commitWarc(String uri);
+    void deleteWarc(String uri);
+
+    // LOCKSS repository operations
+    List<String> urlsInAuid(String auid);
+    List<String> auidsInUrl(String url);
 }
